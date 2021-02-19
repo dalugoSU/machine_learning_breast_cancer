@@ -17,3 +17,6 @@
 
 - sklearn
 - installation: pip install sklearn
+
+
+###### Thank you tech with tim for the tutorial!
