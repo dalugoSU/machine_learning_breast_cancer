@@ -12,7 +12,7 @@ test_data = np.array([1.799e+01, 1.038e+01, 1.228e+02, 1.001e+03, 1.184e-01, 2.7
 def start_test():
     user_test = input("Are we running a prediction based on new data or the test data? ['test', or 'new']: ")
 
-    while user_test.lower() != 'quit' or user_test.lower() != 'test' or user_test.lower() != 'new':
+    while user_test.lower() != 'quit':
         if user_test.lower() == 'quit':
             return "**No Test Performed**"
             break
