@@ -13,16 +13,15 @@ def start_test():
     user_test = input("Are we running a prediction based on new data or the test data? ['test', or 'new']: ")
 
     while user_test.lower() != 'quit':
-        if user_test.lower() == 'quit':
-            return "**No Test Performed**"
-            break
+
         if user_test.lower() == 'test':
             prediction = new_prediction.prediction(svm_model, test_data)
-            return prediction
-            break
+            print(prediction)
+            user_test = input("Are we running a prediction based on new data or the test data? ['test', or 'new']: ")
         elif user_test.lower() == 'new':
             prediction = new_prediction.prediction(svm_model, new_prediction.tumor_data())
-            return prediction
-            break
+            print(prediction)
+            user_test = input("Are we running a prediction based on new data or the test data? ['test', or 'new']: ")
         else:
             print("Must enter 'test' or 'new', no quotes. Enter quit to exit.")
+            user_test = input("Are we running a prediction based on new data or the test data? ['test', or 'new']: ")
